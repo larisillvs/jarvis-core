@@ -1,4 +1,4 @@
-/* RESET BÁSICO E VARIÁVEIS */
+/* RESET E VARIÁVEIS DE CORES MARVEL */
 * {
   margin: 0;
   padding: 0;
@@ -6,18 +6,18 @@
 }
 
 :root {
-  --bg-dark: #0b0c10;
-  --bg-card: #1f2833;
-  --accent-cyan: #66fcf1;
-  --accent-purple: #8a2be2;
-  --text-light: #ffffff;
-  --text-muted: #c5c6c7;
+  --marvel-red: #EC1D24;
+  --marvel-black: #151515;
+  --marvel-dark-gray: #202020;
+  --marvel-light-gray: #767676;
+  --marvel-white: #FFFFFF;
+  --marvel-gold: #FFCC00;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--bg-dark);
-  color: var(--text-muted);
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--marvel-black);
+  color: var(--marvel-white);
   line-height: 1.6;
 }
 
@@ -26,26 +26,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 8%;
-  background: rgba(11, 12, 16, 0.9);
-  backdrop-filter: blur(10px);
-  position: fixed;
+  padding: 1rem 5%;
+  background-color: var(--marvel-black);
+  border-bottom: 3px solid var(--marvel-red);
+  position: sticky;
   top: 0;
-  width: 100%;
   z-index: 1000;
-  border-bottom: 1px solid rgba(102, 252, 241, 0.2);
 }
 
-.logo {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.4rem;
-  font-weight: 900;
-  color: var(--accent-cyan);
-  letter-spacing: 2px;
-}
-
-.logo span {
-  color: var(--accent-purple);
+.nav-logo {
+  height: 40px;
 }
 
 .nav-links {
@@ -55,271 +45,199 @@ body {
 }
 
 .nav-links a {
-  color: var(--text-muted);
+  color: var(--marvel-white);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
   transition: color 0.3s;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-  color: var(--accent-cyan);
-  text-shadow: 0 0 8px rgba(102, 252, 241, 0.6);
+.nav-links a:hover {
+  color: var(--marvel-red);
 }
 
 /* HERO SECTION */
 .hero {
+  position: relative;
   height: 80vh;
+  background: url('https://www.claro.com.br/files/104379/760x520/e1d6c072c5/banner-blog-mobile-tv-assistir-os-vingadores.png') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 8%;
-  margin-top: 60px;
-  background: radial-gradient(circle at center, rgba(138, 43, 226, 0.25) 0%, rgba(11, 12, 16, 1) 70%);
+  padding: 0 1rem;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(21,21,21,0.6) 0%, rgba(21,21,21,0.95) 100%);
 }
 
 .hero-content {
+  position: relative;
+  z-index: 1;
   max-width: 800px;
 }
 
-.badge {
-  display: inline-block;
-  background: rgba(102, 252, 241, 0.1);
-  color: var(--accent-cyan);
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
-  border: 1px solid var(--accent-cyan);
-  font-size: 0.85rem;
+.hero-logo {
+  width: 220px;
   margin-bottom: 1.5rem;
-  font-weight: 600;
+  filter: drop-shadow(0 0 10px rgba(236, 29, 36, 0.5));
 }
 
 .hero h1 {
-  font-family: 'Orbitron', sans-serif;
   font-size: 2.8rem;
-  color: var(--text-light);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   margin-bottom: 1rem;
-  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
 }
 
 .hero p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  color: #ddd;
   margin-bottom: 2rem;
-  color: #a0a5aa;
 }
 
 .btn-primary {
   display: inline-block;
-  background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
-  color: var(--text-light);
-  padding: 0.8rem 2rem;
-  border-radius: 8px;
+  padding: 0.8rem 2.5rem;
+  background-color: var(--marvel-red);
+  color: var(--marvel-white);
   text-decoration: none;
-  font-weight: 800;
-  transition: transform 0.3s, box-shadow 0.3s;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(236, 29, 36, 0.4);
 }
 
 .btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 15px rgba(102, 252, 241, 0.5);
+  background-color: #c4151b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(236, 29, 36, 0.6);
 }
 
-/* SEÇÃO DE MARATONAS E CARDS */
-.maratonas-section, .timeline-section, .characters-section, .teorias-section {
-  padding: 5rem 8%;
+/* SEÇÃO DE DESTAQUES */
+.destaques-section {
+  padding: 4rem 5%;
 }
 
-.section-header, .page-header {
+.section-title {
   text-align: center;
-  margin-bottom: 3rem;
-}
-
-.page-header {
-  padding-top: 8rem;
-}
-
-.section-header h2, .page-header h1 {
-  font-family: 'Orbitron', sans-serif;
   font-size: 2.2rem;
-  color: var(--text-light);
-  margin-bottom: 0.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.cards-grid, .characters-grid {
+.title-underline {
+  width: 80px;
+  height: 4px;
+  background-color: var(--marvel-red);
+  margin: 0.8rem auto 3rem auto;
+}
+
+.cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
 }
 
-.card, .character-card {
-  background-color: var(--bg-card);
-  border-radius: 12px;
+/* CARDS */
+.card {
+  background-color: var(--marvel-dark-gray);
+  border-radius: 8px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  border: 1px solid #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
-.card:hover, .character-card:hover {
+.card:hover {
   transform: translateY(-8px);
-  border-color: var(--accent-cyan);
-  box-shadow: 0 10px 25px rgba(102, 252, 241, 0.15);
+  box-shadow: 0 10px 20px rgba(236, 29, 36, 0.3);
+  border-color: var(--marvel-red);
 }
 
-.card-img-wrapper, .char-img-wrapper {
-  height: 200px;
-  background-color: #121820;
+.card-img-container {
+  height: 320px;
   overflow: hidden;
-  position: relative;
+  background-color: #000;
 }
 
-.card-img-wrapper img, .char-img-wrapper img {
+.card-img-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s;
+  transition: transform 0.5s ease;
 }
 
-.card-body, .char-body {
+.card:hover .card-img-container img {
+  transform: scale(1.05);
+}
+
+.card-content {
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
-.card-body h3, .char-body h3 {
-  color: var(--text-light);
+.card-content h3 {
   font-size: 1.3rem;
-  margin-bottom: 0.8rem;
-}
-
-.card-btn {
-  color: var(--accent-cyan);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-/* FILTROS E BUSCA */
-.filter-container {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-}
-
-.filter-btn {
-  background: var(--bg-card);
-  color: var(--text-muted);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 0.6rem 1.4rem;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s;
-}
-
-.filter-btn:hover, .filter-btn.active {
-  background: var(--accent-cyan);
-  color: var(--bg-dark);
-  box-shadow: 0 0 12px rgba(102, 252, 241, 0.4);
-}
-
-#characterSearch {
-  width: 100%;
-  max-width: 500px;
-  padding: 0.8rem 1.2rem;
-  background-color: var(--bg-card);
-  border: 1px solid rgba(102, 252, 241, 0.3);
-  border-radius: 25px;
-  color: var(--text-light);
-  font-size: 1rem;
-  outline: none;
-  margin-bottom: 1.5rem;
-}
-
-/* CRONOLOGIA TIMELINE */
-.timeline-container {
-  max-width: 850px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.timeline-item {
-  background-color: var(--bg-card);
-  border-left: 4px solid var(--accent-purple);
-  padding: 1.5rem;
-  border-radius: 0 10px 10px 0;
-  transition: transform 0.3s, border-color 0.3s;
-}
-
-.timeline-item:hover {
-  transform: translateX(8px);
-  border-left-color: var(--accent-cyan);
-}
-
-.timeline-tag {
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: var(--accent-cyan);
-  text-transform: uppercase;
-}
-
-/* PERSONAGENS BADGES */
-.char-badge {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  padding: 0.3rem 0.8rem;
-  border-radius: 12px;
-  font-size: 0.75rem;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.heroi-badge { background-color: rgba(102, 252, 241, 0.9); color: #0b0c10; }
-.vilao-badge { background-color: rgba(255, 75, 75, 0.9); color: #ffffff; }
-.antiheroi-badge { background-color: rgba(138, 43, 226, 0.9); color: #ffffff; }
-
-.real-name {
-  display: block;
-  font-size: 0.85rem;
-  color: var(--accent-cyan);
-  margin-bottom: 0.8rem;
-}
-
-/* TEORIAS */
-.teorias-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.teoria-card {
-  background-color: var(--bg-card);
-  padding: 2rem;
-  border-radius: 12px;
-  border: 1px solid rgba(138, 43, 226, 0.3);
-}
-
-.teoria-badge {
-  display: inline-block;
-  background-color: rgba(138, 43, 226, 0.2);
-  color: var(--accent-cyan);
-  padding: 0.3rem 0.8rem;
-  border-radius: 15px;
-  font-size: 0.75rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: #bbb;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.card-link {
+  color: var(--marvel-red);
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.card-link:hover {
+  color: var(--marvel-gold);
 }
 
 /* FOOTER */
-footer {
+.footer {
   text-align: center;
   padding: 2rem;
-  background-color: #060709;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: #0d0d0d;
+  border-top: 1px solid #222;
   font-size: 0.85rem;
-  color: #666;
+  color: var(--marvel-light-gray);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
 }
