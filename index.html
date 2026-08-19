@@ -3,89 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Efeito Multiverso | O Seu Guia do MCU</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Universo Marvel</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Fonte Roboto para visual moderno -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- NAVEGAÇÃO -->
+  <!-- HEADER / NAVBAR -->
   <header class="navbar">
-    <div class="logo">
-      <span>EFEITO</span>MULTIVERSO
+    <div class="logo-container">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Marvel_Logo.svg?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original" alt="Marvel Logo" class="nav-logo">
     </div>
     <nav>
       <ul class="nav-links">
-        <li><a href="index.html" class="active">Início</a></li>
-        <li><a href="cronologia.html">Cronologia</a></li>
-        <li><a href="personagens.html">Personagens</a></li>
-        <li><a href="teorias.html">Teorias</a></li>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Filmes</a></li>
+        <li><a href="#">Personagens</a></li>
+        <li><a href="#">Contato</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- BANNER PRINCIPAL (HERO) -->
+  <!-- HERO SECTION -->
   <section class="hero">
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <span class="badge">Guia Completo do MCU</span>
-      <h1>Explore as Linhas Temporais do Universo Marvel</h1>
-      <p>
-        De variantes a guerras secretas: entenda cada detalhe da Saga do Infinito e do Multiverso com guias de maratona completos e análises de fã para fã.
-      </p>
-      <a href="#maratonas" class="btn-primary">Escolher Maratona</a>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Marvel_Logo.svg?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original" alt="Marvel Hero Logo" class="hero-logo">
+      <h1>BEM-VINDO AO UNIVERSO MARVEL</h1>
+      <p>Explore as maiores sagas, heróis e produções do mundo dos quadrinhos e do cinema.</p>
+      <a href="#destaques" class="btn-primary">EXPLORAR</a>
     </div>
   </section>
 
-  <!-- SEÇÃO DE MARATONAS -->
-  <section id="maratonas" class="maratonas-section">
-    <div class="section-header">
-      <h2>Escolha Seu Estilo de Maratona</h2>
-      <p>Selecione como você prefere navegar pela história dos heróis mais poderosos da Terra.</p>
-    </div>
+  <!-- SEÇÃO DE DESTAQUES (GRID DE CARDS) -->
+  <section id="destaques" class="destaques-section">
+    <h2 class="section-title">DESTAQUES E PRODUÇÕES</h2>
+    <div class="title-underline"></div>
 
     <div class="cards-grid">
+
+      <!-- Card 1 -->
       <div class="card">
-        <div class="card-img-wrapper">
-          <img src="assets/images/ordem-cronologica.jpg" alt="Ordem Cronológica Marvel">
+        <div class="card-img-container">
+          <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/9/9b/Avengers_Endgame.jpg/250px-Avengers_Endgame.jpg?utm_source=pt.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="Vingadores Ultimato">
         </div>
-        <div class="card-body">
-          <h3>Ordem Cronológica</h3>
-          <p>Siga os eventos na sequência exata em que aconteceram no tempo, do Capitão América nos anos 40 até os dias atuais.</p>
-          <a href="cronologia.html?modo=cronologica" class="card-btn">Ver Guia →</a>
+        <div class="card-content">
+          <h3>Vingadores: Ultimato</h3>
+          <p>O ponto culminante de 22 filmes interconectados e o ápice de uma jornada épica.</p>
+          <a href="#" class="card-link">SABER MAIS</a>
         </div>
       </div>
 
+      <!-- Card 2 -->
       <div class="card">
-        <div class="card-img-wrapper">
-          <img src="assets/images/ordem-lancamento.jpg" alt="Ordem de Lançamento Marvel">
+        <div class="card-img-container">
+          <img src="https://lumiere-a.akamaihd.net/v1/images/au_marvel_theavengers_ageofultron_movie_poster_5705ee77.jpeg?region=3,0,537,578" alt="Era de Ultron">
         </div>
-        <div class="card-body">
-          <h3>Ordem de Lançamento</h3>
-          <p>Viva a experiência exata de quem acompanhou a evolução do MCU nos cinemas desde Homem de Ferro em 2008.</p>
-          <a href="cronologia.html?modo=lancamento" class="card-btn">Ver Guia →</a>
+        <div class="card-content">
+          <h3>Era de Ultron</h3>
+          <p>Os Vingadores enfrentam a inteligência artificial Ultron para salvar a humanidade.</p>
+          <a href="#" class="card-link">SABER MAIS</a>
         </div>
       </div>
 
+      <!-- Card 3 -->
       <div class="card">
-        <div class="card-img-wrapper">
-          <img src="assets/images/maratona-rapida.jpg" alt="Maratona Essencial Marvel">
+        <div class="card-img-container">
+          <img src="https://rollingstone.com.br/wp-content/uploads/2025/02/os-thunderbolts-substituem-os-vingadores-em-novo-trailer-do-filme-da-marvel.jpg" alt="Thunderbolts">
         </div>
-        <div class="card-body">
-          <h3>Maratona Essencial</h3>
-          <p>Pouco tempo? Assista apenas aos filmes e séries indispensáveis para entender a Saga do Multiverso atual.</p>
-          <a href="cronologia.html?modo=essencial" class="card-btn">Ver Guia →</a>
+        <div class="card-content">
+          <h3>Thunderbolts*</h3>
+          <p>Uma equipe nada convencional formada por anti-heróis em missões perigosas.</p>
+          <a href="#" class="card-link">SABER MAIS</a>
         </div>
       </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <div class="card-img-container">
+          <img src="https://www.claro.com.br/files/104379/760x520/e1d6c072c5/banner-blog-mobile-tv-assistir-os-vingadores.png" alt="Maratona Vingadores">
+        </div>
+        <div class="card-content">
+          <h3>Saga Os Vingadores</h3>
+          <p>Relembre a união dos heróis mais poderosos da Terra desde o início.</p>
+          <a href="#" class="card-link">SABER MAIS</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- RODAPÉ -->
-  <footer>
-    <p>&copy; 2026 Efeito Multiverso. Site criado por fãs — Não possui vínculo oficial com a Marvel Studios / Disney.</p>
+  <footer class="footer">
+    <p>&copy; Universo Marvel Fan Site. Todos os direitos reservados às marcas registradas.</p>
   </footer>
 
-  <script src="js/script.js"></script>
 </body>
 </html>
