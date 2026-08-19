@@ -1,32 +1,25 @@
-// Efeito de rolagem suave para links internos
+// 1. ROLAGEM SUAVE DOS LINKS
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth'
-      });
+      target.scrollIntoView({ behavior: 'smooth' });
     }
   });
 });
 
-console.log("Efeito Multiverso inicializado com sucesso!");
-// FUNCIONALIDADE DOS FILTROS DA CRONOLOGIA
-const filterButtons = document.querySelectorAll('.filter-btn');
+// 2. FILTROS DA CRONOLOGIA
+const filterButtons = document.querySelectorAll('.filter-btn:not(.char-filter-btn)');
 const timelineItems = document.querySelectorAll('.timeline-item');
 
 function aplicarFiltro(categoria) {
   filterButtons.forEach(btn => {
-    if (btn.dataset.filter === categoria) {
-      btn.classList.add('active');
-    } else {
-      btn.classList.remove('active');
-    }
+    btn.classList.toggle('active', btn.dataset.filter === categoria);
   });
 
   timelineItems.forEach(item => {
-    const categoriasDoItem = item.dataset.category.split(' ');
+    const categoriasDoItem = item.dataset.category ? item.dataset.category.split(' ') : [];
     if (categoria === 'todas' || categoriasDoItem.includes(categoria)) {
       item.style.display = 'block';
     } else {
@@ -35,15 +28,13 @@ function aplicarFiltro(categoria) {
   });
 }
 
-// Evento de clique nos botões
 filterButtons.forEach(button => {
   button.addEventListener('click', () => {
-    const filter = button.dataset.filter;
-    aplicarFiltro(filter);
+    aplicarFiltro(button.dataset.filter);
   });
 });
 
-// Captura se o usuário veio da home escolhendo uma opção pelo link (ex: ?modo=cronologica)
+// Captura filtros vindos da URL (Ex: cronologia.html?modo=cronologica)
 window.addEventListener('DOMContentLoaded', () => {
   const urlParams = new URLSearchParams(window.location.search);
   const modo = urlParams.get('modo');
@@ -51,7 +42,8 @@ window.addEventListener('DOMContentLoaded', () => {
     aplicarFiltro(modo);
   }
 });
-// BUSCA E FILTRO DE PERSONAGENS
+
+// 3. BUSCA E FILTROS DA PERSONAGENS
 const charSearchInput = document.getElementById('characterSearch');
 const charFilterBtns = document.querySelectorAll('.char-filter-btn');
 const characterCards = document.querySelectorAll('.character-card');
@@ -68,11 +60,7 @@ function filtrarPersonagens() {
     const bateuComBusca = cardName.includes(query);
     const bateuComTipo = selectedType === 'todos' || cardType === selectedType;
 
-    if (bateuComBusca && bateuComTipo) {
-      card.style.display = 'block';
-    } else {
-      card.style.display = 'none';
-    }
+    card.style.display = (bateuComBusca && bateuComTipo) ? 'block' : 'none';
   });
 }
 
@@ -87,3 +75,5 @@ charFilterBtns.forEach(btn => {
     filtrarPersonagens();
   });
 });
+
+console.log("Efeito Multiverso inicializado com sucesso!");
