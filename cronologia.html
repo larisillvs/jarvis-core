@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cronologia e Maratonas | Efeito Multiverso</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVEGAÇÃO -->
+  <header class="navbar">
+    <div class="logo">
+      <span>EFEITO</span>MULTIVERSO
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="cronologia.html" class="active">Cronologia</a></li>
+        <li><a href="personagens.html">Personagens</a></li>
+        <li><a href="teorias.html">Teorias</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CABEÇALHO DA PÁGINA -->
+  <section class="page-header">
+    <h1>Linha do Tempo do MCU</h1>
+    <p>Filtre e organize os lançamentos da Marvel de acordo com o seu objetivo de maratona.</p>
+    
+    <!-- BOTOES DE FILTRO -->
+    <div class="filter-container">
+      <button class="filter-btn active" data-filter="todas">Todas as Produções</button>
+      <button class="filter-btn" data-filter="cronologica">Ordem Cronológica</button>
+      <button class="filter-btn" data-filter="lancamento">Ordem de Lançamento</button>
+      <button class="filter-btn" data-filter="essencial">Maratona Essencial</button>
+    </div>
+  </section>
+
+  <!-- LISTA / TIMELINE DE FILMES E SÉRIES -->
+  <section class="timeline-section">
+    <div class="timeline-container" id="timelineList">
+
+      <!-- ITEM 1 -->
+      <div class="timeline-item" data-category="cronologica lancamento essencial">
+        <span class="timeline-tag">Fase 1</span>
+        <div class="timeline-content">
+          <h3>Capitão América: O Primeiro Vingador</h3>
+          <span class="meta-info">Ano dos eventos: 1942-1945 | Lançamento: 2011</span>
+          <p>O início de tudo na ordem cronológica. Steve Rogers recebe o soro do super-soldado e enfrenta a HYDRA durante a Segunda Guerra Mundial.</p>
+        </div>
+      </div>
+
+      <!-- ITEM 2 -->
+      <div class="timeline-item" data-category="lancamento essencial">
+        <span class="timeline-tag">Fase 1</span>
+        <div class="timeline-content">
+          <h3>Homem de Ferro</h3>
+          <span class="meta-info">Ano dos eventos: 2010 | Lançamento: 2008</span>
+          <p>O pontapé inicial do MCU nos cinemas! Tony Stark constrói sua primeira armadura e inicia a era dos heróis modernos.</p>
+        </div>
+      </div>
+
+      <!-- ITEM 3 -->
+      <div class="timeline-item" data-category="cronologica lancamento essencial">
+        <span class="timeline-tag">Fase 1</span>
+        <div class="timeline-content">
+          <h3>Os Vingadores</h3>
+          <span class="meta-info">Ano dos eventos: 2012 | Lançamento: 2012</span>
+          <p>Nick Fury reúne os heróis mais poderosos da Terra pela primeira vez para conter a invasão chitauri comandada por Loki.</p>
+        </div>
+      </div>
+
+      <!-- ITEM 4 -->
+      <div class="timeline-item" data-category="cronologica lancamento essencial">
+        <span class="timeline-tag">Fase 3</span>
+        <div class="timeline-content">
+          <h3>Vingadores: Ultimato</h3>
+          <span class="meta-info">Ano dos eventos: 2023 | Lançamento: 2019</span>
+          <p>O ápice da Saga do Infinito. Os heróis sobreviventes tentam reverter o estalo de Thanos usando viagens no tempo.</p>
+        </div>
+      </div>
+
+      <!-- ITEM 5 -->
+      <div class="timeline-item" data-category="cronologica lancamento essencial">
+        <span class="timeline-tag">Fase 4</span>
+        <div class="timeline-content">
+          <h3>Loki (Série - 1ª e 2ª Temporadas)</h3>
+          <span class="meta-info">Ano dos eventos: Fora do Tempo | Lançamento: 2021-2023</span>
+          <p>Indispensável! Apresenta a AVT, o conceito de ramificação de linhas temporais e abre as portas para a Saga do Multiverso.</p>
+        </div>
+      </div>
+
+      <!-- ITEM 6 -->
+      <div class="timeline-item" data-category="cronologica lancamento">
+        <span class="timeline-tag">Fase 4</span>
+        <div class="timeline-content">
+          <h3>Homem-Aranha: Sem Volta Para Casa</h3>
+          <span class="meta-info">Ano dos eventos: 2024 | Lançamento: 2021</span>
+          <p>Peter Parker pede ajuda ao Doutor Estranho, causando um colapso no espaço-tempo que atrai vilões e heróis de outros universos.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>&copy; 2026 Efeito Multiverso. Site criado por fãs — Não possui vínculo oficial com a Marvel Studios / Disney.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

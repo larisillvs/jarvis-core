@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enciclopédia de Personagens | Efeito Multiverso</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVEGAÇÃO -->
+  <header class="navbar">
+    <div class="logo">
+      <span>EFEITO</span>MULTIVERSO
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="cronologia.html">Cronologia</a></li>
+        <li><a href="personagens.html" class="active">Personagens</a></li>
+        <li><a href="teorias.html">Teorias</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CABEÇALHO DA PÁGINA -->
+  <section class="page-header">
+    <h1>Enciclopédia de Personagens</h1>
+    <p>Conheça a origem, variante e primeira aparição dos principais heróis e vilões do MCU.</p>
+    
+    <!-- BARRA DE BUSCA E FILTROS -->
+    <div class="search-filter-container">
+      <input type="text" id="characterSearch" placeholder="Buscar por nome do personagem...">
+      <div class="filter-container">
+        <button class="filter-btn char-filter-btn active" data-char-filter="todos">Todos</button>
+        <button class="filter-btn char-filter-btn" data-char-filter="heroi">Heróis</button>
+        <button class="filter-btn char-filter-btn" data-char-filter="vilao">Vilões</button>
+        <button class="filter-btn char-filter-btn" data-char-filter="antiheroi">Anti-Heróis</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRID DE PERSONAGENS -->
+  <section class="characters-section">
+    <div class="characters-grid" id="charactersGrid">
+
+      <!-- CARD 1: Homem de Ferro -->
+      <div class="character-card" data-type="heroi" data-name="homem de ferro tony stark">
+        <div class="char-img-wrapper">
+          <img src="assets/images/homem-de-ferro.jpg" alt="Homem de Ferro">
+          <span class="char-badge heroi-badge">Herói</span>
+        </div>
+        <div class="char-body">
+          <h3>Homem de Ferro</h3>
+          <span class="real-name">Tony Stark</span>
+          <p class="char-desc">Gênio, bilionário, playboy e filantropo. O criador da primeira armadura que deu início à era dos Vingadores.</p>
+          <div class="char-details">
+            <p><strong>Primeira Aparição:</strong> Homem de Ferro (2008)</p>
+            <p><strong>Terra de Origem:</strong> Terra-616</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2: Doutor Estranho -->
+      <div class="character-card" data-type="heroi" data-name="doutor estranho stephen strange">
+        <div class="char-img-wrapper">
+          <img src="assets/images/doutor-estranho.jpg" alt="Doutor Estranho">
+          <span class="char-badge heroi-badge">Herói</span>
+        </div>
+        <div class="char-body">
+          <h3>Doutor Estranho</h3>
+          <span class="real-name">Stephen Strange</span>
+          <p class="char-desc">Mestre das Artes Místicas responsável por proteger a Terra e monitorar as ameaças interdimensionais no Multiverso.</p>
+          <div class="char-details">
+            <p><strong>Primeira Aparição:</strong> Doutor Estranho (2016)</p>
+            <p><strong>Terra de Origem:</strong> Terra-616</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: Loki -->
+      <div class="character-card" data-type="antiheroi" data-name="loki deus da trapaça">
+        <div class="char-img-wrapper">
+          <img src="assets/images/loki.jpg" alt="Loki">
+          <span class="char-badge antiheroi-badge">Anti-Herói</span>
+        </div>
+        <div class="char-body">
+          <h3>Loki</h3>
+          <span class="real-name">Loki Laufeyson</span>
+          <p class="char-desc">Deus da Trapaça de Asgard. Passou de vilão da invasão de Nova York a protetor do tear temporal e de todo o Multiverso.</p>
+          <div class="char-details">
+            <p><strong>Primeira Aparição:</strong> Thor (2011)</p>
+            <p><strong>Terra de Origem:</strong> Terra-616 (Variante)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4: Thanos -->
+      <div class="character-card" data-type="vilao" data-name="thanos titan louco">
+        <div class="char-img-wrapper">
+          <img src="assets/images/thanos.jpg" alt="Thanos">
+          <span class="char-badge vilao-badge">Vilão</span>
+        </div>
+        <div class="char-body">
+          <h3>Thanos</h3>
+          <span class="real-name">O Titã Louco</span>
+          <p class="char-desc">Conquistador intergaláctico que reuniu as seis Joias do Infinito para eliminar metade da vida no universo.</p>
+          <div class="char-details">
+            <p><strong>Primeira Aparição:</strong> Os Vingadores (2012 - Pós-créditos)</p>
+            <p><strong>Terra de Origem:</strong> Titã (Terra-616)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 5: Feiticeira Escarlate -->
+      <div class="character-card" data-type="antiheroi" data-name="feiticeira escarlate wanda maximoff">
+        <div class="char-img-wrapper">
+          <img src="assets/images/wanda.jpg" alt="Feiticeira Escarlate">
+          <span class="char-badge antiheroi-badge">Anti-Herói</span>
+        </div>
+        <div class="char-body">
+          <h3>Feiticeira Escarlate</h3>
+          <span class="real-name">Wanda Maximoff</span>
+          <p class="char-desc">Mestra da Magia do Caos com o poder de alterar a própria realidade, manipulando o Darkhold em busca dos seus filhos.</p>
+          <div class="char-details">
+            <p><strong>Primeira Aparição:</strong> Vingadores: Era de Ultron (2015)</p>
+            <p><strong>Terra de Origem:</strong> Terra-616</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 6: Kang, o Conquistador -->
+      <div class="character-card" data-type="vilao" data-name="kang o conquistador aquele que permanece">
+        <div class="char-img-wrapper">
+          <img src="assets/images/kang.jpg" alt="Kang o Conquistador">
+          <span class="char-badge vilao-badge">Vilão</span>
+        </div>
+        <div class="char-body">
+          <h3>Kang, o Conquistador</h3>
+          <span class="real-name">Nathaniel Richards</span>
+          <p class="char-desc">Viajante do tempo do século XXXI cujas variantes travam guerras interdimensionais pelo controle total das linhas temporais.</p>
+          <div class="char-details">
+            <p><strong>Primeira Aparição:</strong> Loki - 1ª Temp (2021)</p>
+            <p><strong>Terra de Origem:</strong> Século 31 (Linha Temporal)</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>&copy; 2026 Efeito Multiverso. Site criado por fãs — Não possui vínculo oficial com a Marvel Studios / Disney.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
